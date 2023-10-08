@@ -3,6 +3,9 @@ import express from "express";
 import connectDB from "./config/connectDB"; // Update the path if necessary
 import cors from "cors";
 import userRoutes from "./routes/userRoutes";
+import userDetailsRoutes from "./routes/UserDetailsRoutes";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -20,10 +23,11 @@ app.use(
 
 // Use user routes
 app.use("/v1/api/users", userRoutes);
+app.use("/v1/api/userdetails", userDetailsRoutes);
 // Protected routes (example)
 // app.use('/api/some-protected-route', authMiddleware, someProtectedRoute);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
