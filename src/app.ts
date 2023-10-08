@@ -24,6 +24,9 @@ app.use(
 // Use user routes
 app.use("/v1/api/users", userRoutes);
 app.use("/v1/api/userdetails", userDetailsRoutes);
+app.get('/', (req, res) => {
+  res.json({ message: 'Server is working!' });
+});
 // Protected routes (example)
 // app.use('/api/some-protected-route', authMiddleware, someProtectedRoute);
 
