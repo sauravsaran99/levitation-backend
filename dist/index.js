@@ -16,7 +16,7 @@ app.use(express_1.default.json());
 // Connect to MongoDB
 (0, connectDB_1.default)();
 app.use((0, cors_1.default)({
-    origin: ["http://localhost:5173", "https://levitation-frontend-zt17.vercel.app/"],
+    origin: ["http://localhost:5173", "https://levitation-frontend-zt17.vercel.app", "https://levitation-frontend-4gd5.vercel.app/login"],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Enable credentials (cookies, authorization headers)
 }));
