@@ -15,7 +15,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://levitation-frontend-zt17.vercel.app", "https://levitation-frontend-4gd5.vercel.app/login"], // Update with your frontend URL
+    origin: ["http://localhost:5173", "https://levitation-frontend.vercel.app", "https://levitation-frontend.vercel.app/login"], // Update with your frontend URL
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Enable credentials (cookies, authorization headers)
   })
